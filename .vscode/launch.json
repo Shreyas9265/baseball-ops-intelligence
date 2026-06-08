@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Baseball Ops App",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/server.py",
+      "console": "integratedTerminal",
+      "env": {
+        "HOST": "localhost",
+        "PORT": "8000"
+      }
+    },
+    {
+      "name": "Debug API Tests",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "unittest",
+      "args": ["discover", "-s", "tests"],
+      "console": "integratedTerminal"
+    }
+  ]
+}
+
