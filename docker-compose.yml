@@ -1,0 +1,14 @@
+services:
+  baseball-ops-intelligence:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8000
+    volumes:
+      - baseball_ops_data:/app/data
+
+volumes:
+  baseball_ops_data:
+

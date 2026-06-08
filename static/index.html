@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Baseball Ops Intelligence</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Baseball Operations</p>
+        <h1>Player Intelligence Platform</h1>
+      </div>
+      <button id="refreshButton" class="icon-button" title="Refresh dashboard" aria-label="Refresh dashboard">Refresh</button>
+    </header>
+
+    <main class="layout">
+      <section class="metrics-grid" aria-label="Platform summary">
+        <article>
+          <span>Total Players</span>
+          <strong id="playerCount">0</strong>
+        </article>
+        <article>
+          <span>Avg Readiness</span>
+          <strong id="avgReadiness">0</strong>
+        </article>
+        <article>
+          <span>High Priority</span>
+          <strong id="highPriority">0</strong>
+        </article>
+        <article>
+          <span>Reports</span>
+          <strong id="reportCount">0</strong>
+        </article>
+      </section>
+
+      <section class="workspace">
+        <aside class="panel roster-panel">
+          <div class="section-title">
+            <h2>Roster</h2>
+            <span id="lastUpdated">Live</span>
+          </div>
+          <div id="playerList" class="player-list"></div>
+        </aside>
+
+        <section class="panel detail-panel">
+          <div id="playerDetail" class="player-detail"></div>
+        </section>
+      </section>
+
+      <section class="two-column">
+        <section class="panel">
+          <div class="section-title">
+            <h2>AI Recommendations</h2>
+            <button id="recommendButton" class="small-button">Generate</button>
+          </div>
+          <div id="recommendations" class="recommendations"></div>
+        </section>
+
+        <section class="panel">
+          <div class="section-title">
+            <h2>Workflow Queue</h2>
+            <span>Decision support</span>
+          </div>
+          <form id="workflowForm" class="workflow-form">
+            <select id="workflowPlayer" aria-label="Player"></select>
+            <input id="workflowTitle" type="text" placeholder="New follow-up task" required>
+            <input id="workflowOwner" type="text" placeholder="Owner" required>
+            <select id="workflowPriority" aria-label="Priority">
+              <option>High</option>
+              <option>Medium</option>
+              <option>Low</option>
+            </select>
+            <input id="workflowDueDate" type="date" required>
+            <button type="submit">Add Task</button>
+          </form>
+          <div id="workflowList" class="workflow-list"></div>
+        </section>
+      </section>
+
+      <section class="panel">
+        <div class="section-title">
+          <h2>Operations Reports</h2>
+          <span>Scouting, analytics, medical, and player development</span>
+        </div>
+        <div id="reportList" class="report-list"></div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
+
