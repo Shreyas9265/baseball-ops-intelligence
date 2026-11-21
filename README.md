@@ -1,5 +1,8 @@
 # Baseball Ops Intelligence Platform
 
+**🔴 Live demo:** https://baseball-ops.vercel.app · redeploy with `vercel/deploy.sh`
+
+
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![SQLite](https://img.shields.io/badge/Database-SQLite-green)
 ![CI](https://img.shields.io/badge/CI-GitHub%20Actions-black)
